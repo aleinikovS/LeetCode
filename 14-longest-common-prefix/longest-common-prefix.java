@@ -21,4 +21,20 @@ class Solution {
             return prefix;
         return substring(str, prefix.substring(0, prefix.length() - 1));
     }
+
+
+    // еще одно интересное решение
+    public String longestCommonPrefixADD(String[] v) {
+        StringBuilder ans = new StringBuilder();
+        Arrays.sort(v);
+        String first = v[0];
+        String last = v[v.length-1];
+        for (int i=0; i<Math.min(first.length(), last.length()); i++) {
+            if (first.charAt(i) != last.charAt(i)) {
+                return ans.toString();
+            }
+            ans.append(first.charAt(i));
+        }
+        return ans.toString();
+    }
 }
