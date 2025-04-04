@@ -17,8 +17,8 @@ class Solution {
     private static String substring(String str, String prefix) {
         if (prefix.length() == 0)
             return "";
-        if (!str.startsWith(prefix))
-            prefix = substring(str, prefix.substring(0, prefix.length() - 1));
-        return prefix;
+        if (str.startsWith(prefix))
+            return prefix;
+        return substring(str, prefix.substring(0, prefix.length() - 1));
     }
 }
