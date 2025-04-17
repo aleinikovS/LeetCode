@@ -22,8 +22,8 @@ class Solution {
         }
 
         StringBuilder result = new StringBuilder();
-        for (int i = 0; i < sb.length; i++) {
-            result.append(sb[i].toString());
+        for (StringBuilder strB : sb) {
+            result.append(strB.toString());
         }
 
         return result.toString();
